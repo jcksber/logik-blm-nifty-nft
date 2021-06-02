@@ -1,0 +1,14 @@
+{
+  "name": "logik-blm-nifty-nft",
+  "version": "1.0.0",
+  "description": "LOGIK x BLM Niftygateway NFT drop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jack Kasbeer",
+  "license": "ISC",
+  "devDependencies": {
+    "hardhat": "^2.3.0"
+  }
+}
