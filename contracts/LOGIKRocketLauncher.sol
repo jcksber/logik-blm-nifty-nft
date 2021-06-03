@@ -28,7 +28,7 @@ contract LOGIKRocketLauncher is ERC721, Ownable {
 
 
 	// (!) NOTE: we need to remove this and turn it into an initializer for upgrade-ability
-	constructor() ERC721("BLMTest", "BLM0") {
+	constructor() ERC721("LOGIK x BLM: Rocket Launcher", "LGKRL") {
 		_creationTime = block.timestamp;
 	}
 
