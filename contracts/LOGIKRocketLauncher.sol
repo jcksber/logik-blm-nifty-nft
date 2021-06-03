@@ -4,7 +4,8 @@
  *
  * Created: June 2, 2021
  * Author: Jack Kasbeer
- * Description: ERC721 w/ a dynamic URI based on the date
+ * Description: ERC721 w/ a dynamic URI based on the date that links to 
+ * 				different versions of an animation by LOGIK
  * Address:
  */
 
@@ -62,11 +63,10 @@ contract LOGIKRocketLauncher is ERC721, Ownable {
 	{	
 		_tokenIds.increment(); //for future collectibles
 
-		uint256 newCollectibleId = _tokenIds.current();
-		_safeMint(recipient, newCollectibleId);
-		//_setTokenURI(newCollectibleId, uri);
+		uint256 newRocketId = _tokenIds.current();
+		_safeMint(recipient, newRocketId);
 
-		return newCollectibleId;
+		return newRocketId;
 	}
 
 
