@@ -1,44 +1,6 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "/Users/kamikaze/Desktop/localsrc/crypto/logik-blm-nifty-nft/contracts/LOGIKRocketLauncher.sol": {
-      "lastModificationDate": 1622685506334,
-      "contentHash": "691b9482916db7f0b40827ac35a3f330",
-      "sourceName": "contracts/LOGIKRocketLauncher.sol",
-      "solcConfig": {
-        "version": "0.8.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@openzeppelin/contracts/token/ERC721/ERC721.sol",
-        "@openzeppelin/contracts/utils/Counters.sol",
-        "@openzeppelin/contracts/access/Ownable.sol"
-      ],
-      "versionPragmas": [
-        "^0.8.0"
-      ],
-      "artifacts": [
-        "LOGIKRocketLauncher"
-      ]
-    },
     "/Users/kamikaze/Desktop/localsrc/crypto/logik-blm-nifty-nft/node_modules/@openzeppelin/contracts/token/ERC721/ERC721.sol": {
       "lastModificationDate": 1622683673736,
       "contentHash": "8fc7506d6ee32c5fbc527b0c42f0e615",
@@ -503,6 +465,44 @@
       ],
       "artifacts": [
         "LOGIKRoses"
+      ]
+    },
+    "/Users/kamikaze/Desktop/localsrc/crypto/logik-blm-nifty-nft/contracts/LOGIKRocketBitch.sol": {
+      "lastModificationDate": 1622770171453,
+      "contentHash": "f3979571e42afb8436f1a43417451663",
+      "sourceName": "contracts/LOGIKRocketBitch.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/token/ERC721/ERC721.sol",
+        "@openzeppelin/contracts/utils/Counters.sol",
+        "@openzeppelin/contracts/access/Ownable.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "LOGIKRocketBitch"
       ]
     }
   }
