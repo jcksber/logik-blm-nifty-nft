@@ -6,7 +6,8 @@
  * Author: Jack Kasbeer
  * Description: ERC721 w/ a dynamic URI based on the date that links to 
  * 				different versions of an animation by LOGIK
- * Address:
+ * Mainnet Address:
+ * Rinkeby Address: 0xCf3d210B28521420712c00CCEF743bD69e3Ca530
  */
 
 // NOTE: 5 ASSETS, 10 DAY CYCLE
@@ -26,7 +27,7 @@ contract LOGIKRocketBitch is ERC721, Ownable {
 	uint private _lastHashIdx;
 	string[5] _assetHashes = ["QmWogPztGXiW6tbCcEfk2m819n1QPrQK7EVnxgZdPVRUPD", 
 							  "QmNawKGNQxweTEzKADMoqXbAsyCDYR3KWbsCstrazKbwFC",
-							  "QmNawKGNQxweTEzKADMoqXbAsyCDYR3KWbsCstrazKbwFC",
+							  "QmWogPztGXiW6tbCcEfk2m819n1QPrQK7EVnxgZdPVRUPD",
 							  "QmNawKGNQxweTEzKADMoqXbAsyCDYR3KWbsCstrazKbwFC",
 							  "QmNawKGNQxweTEzKADMoqXbAsyCDYR3KWbsCstrazKbwFC"];
 	// 0: "Air this bitch out"
@@ -47,15 +48,15 @@ contract LOGIKRocketBitch is ERC721, Ownable {
 	{
 		require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
 
-		string memory baseURI = _baseURI();
+		string memory baseURI = _baseURI(); //we'll need this to complete the URL
+
 		// Get current time & determine how many days have gone by since creation
 		uint todayTime = block.timestamp;
 		uint256 daysPassed = uint256((todayTime - _creationTime) / 60 / 60 / 24);
 		uint idx = _lastHashIdx;
 
 		// If a multiple of 10 days have passed, rotate in the next URI
-		if (daysPassed % NUM_DAYS_IN_CYCLE == 0) {
-			// Day 0, 10, 20, 30, ...
+		if (daysPassed % NUM_DAYS_IN_CYCLE == 0) { //day 0, 10, 20, 30,...
 			idx = _lastHashIdx < (_assetHashes.length - 1)
 				? _lastHashIdx + 1 
 				: 0;
@@ -75,7 +76,7 @@ contract LOGIKRocketBitch is ERC721, Ownable {
 
 
 	// Mint a single LOGIKRocketLauncher
-	function mintRocketLauncher(address recipient) public onlyOwner returns (uint256)
+	function mintRocketBitch(address recipient) public onlyOwner returns (uint256)
 	{	
 		_tokenIds.increment(); //for future collectibles
 

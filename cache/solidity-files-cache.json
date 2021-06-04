@@ -468,8 +468,8 @@
       ]
     },
     "/Users/kamikaze/Desktop/localsrc/crypto/logik-blm-nifty-nft/contracts/LOGIKRocketBitch.sol": {
-      "lastModificationDate": 1622770171453,
-      "contentHash": "f3979571e42afb8436f1a43417451663",
+      "lastModificationDate": 1622771705497,
+      "contentHash": "9da5f05ee2b09b2d2caffa6e5281b41e",
       "sourceName": "contracts/LOGIKRocketBitch.sol",
       "solcConfig": {
         "version": "0.8.0",
