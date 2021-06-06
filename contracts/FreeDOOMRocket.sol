@@ -23,13 +23,14 @@ contract FreeDOOMRocket is ERC721, Ownable {
 	Counters.Counter private _tokenIds;
 
 	uint constant NUM_DAYS_IN_CYCLE = 10;
+	uint constant NUM_ASSETS = 5;
 	uint private _creationTime;
 	uint private _lastHashIdx;
-	string[5] _assetHashes = ["QmWogPztGXiW6tbCcEfk2m819n1QPrQK7EVnxgZdPVRUPD", 
-							  "QmNawKGNQxweTEzKADMoqXbAsyCDYR3KWbsCstrazKbwFC",
-							  "QmWogPztGXiW6tbCcEfk2m819n1QPrQK7EVnxgZdPVRUPD",
-							  "QmNawKGNQxweTEzKADMoqXbAsyCDYR3KWbsCstrazKbwFC",
-							  "QmNawKGNQxweTEzKADMoqXbAsyCDYR3KWbsCstrazKbwFC"];
+	string[NUM_ASSETS] _assetHashes = ["QmWogPztGXiW6tbCcEfk2m819n1QPrQK7EVnxgZdPVRUPD", 
+							  		   "QmNawKGNQxweTEzKADMoqXbAsyCDYR3KWbsCstrazKbwFC",
+							  		   "QmWogPztGXiW6tbCcEfk2m819n1QPrQK7EVnxgZdPVRUPD",
+							  		   "QmNawKGNQxweTEzKADMoqXbAsyCDYR3KWbsCstrazKbwFC",
+							  		   "QmNawKGNQxweTEzKADMoqXbAsyCDYR3KWbsCstrazKbwFC"];
 	// 0: "Air this bitch out"
 	// 1: 
 	// ...

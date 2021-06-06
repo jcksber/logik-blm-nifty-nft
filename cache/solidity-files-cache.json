@@ -392,8 +392,8 @@
       ]
     },
     "/Users/kamikaze/Desktop/localsrc/crypto/logik-blm-nifty-nft/contracts/Breffis.sol": {
-      "lastModificationDate": 1622947121417,
-      "contentHash": "7c7310dbc74bfc7b678d63bfc94fbecb",
+      "lastModificationDate": 1622950821856,
+      "contentHash": "e4cb73219e96c04ca37251049fa17540",
       "sourceName": "contracts/Breffis.sol",
       "solcConfig": {
         "version": "0.8.0",
@@ -468,8 +468,8 @@
       ]
     },
     "/Users/kamikaze/Desktop/localsrc/crypto/logik-blm-nifty-nft/contracts/FreeDOOMRocket.sol": {
-      "lastModificationDate": 1622945606859,
-      "contentHash": "7df8c2ee4b235537daa2336c7c0c4e4c",
+      "lastModificationDate": 1622950399825,
+      "contentHash": "3b66cc6e61af9bd045bb65b0af1fe772",
       "sourceName": "contracts/FreeDOOMRocket.sol",
       "solcConfig": {
         "version": "0.8.0",
