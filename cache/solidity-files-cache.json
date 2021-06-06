@@ -391,10 +391,10 @@
         "IERC165"
       ]
     },
-    "/Users/kamikaze/Desktop/localsrc/crypto/logik-blm-nifty-nft/contracts/LOGIKFlaminHot.sol": {
-      "lastModificationDate": 1622686628059,
-      "contentHash": "35d4d412ef09024b3394c2f485ad72bf",
-      "sourceName": "contracts/LOGIKFlaminHot.sol",
+    "/Users/kamikaze/Desktop/localsrc/crypto/logik-blm-nifty-nft/contracts/Breffis.sol": {
+      "lastModificationDate": 1622947121417,
+      "contentHash": "7c7310dbc74bfc7b678d63bfc94fbecb",
+      "sourceName": "contracts/Breffis.sol",
       "solcConfig": {
         "version": "0.8.0",
         "settings": {
@@ -426,13 +426,13 @@
         "^0.8.0"
       ],
       "artifacts": [
-        "LOGIKFlaminHot"
+        "Breffis"
       ]
     },
-    "/Users/kamikaze/Desktop/localsrc/crypto/logik-blm-nifty-nft/contracts/LOGIKRoses.sol": {
-      "lastModificationDate": 1622686646587,
-      "contentHash": "f18d9a74e2bad90319a1d5c3d79a6640",
-      "sourceName": "contracts/LOGIKRoses.sol",
+    "/Users/kamikaze/Desktop/localsrc/crypto/logik-blm-nifty-nft/contracts/LoveForTheLow.sol": {
+      "lastModificationDate": 1622947432342,
+      "contentHash": "31f33acec846b7dadcb44bd0bb19114c",
+      "sourceName": "contracts/LoveForTheLow.sol",
       "solcConfig": {
         "version": "0.8.0",
         "settings": {
@@ -464,13 +464,13 @@
         "^0.8.0"
       ],
       "artifacts": [
-        "LOGIKRoses"
+        "LoveForTheLow"
       ]
     },
-    "/Users/kamikaze/Desktop/localsrc/crypto/logik-blm-nifty-nft/contracts/LOGIKRocketBitch.sol": {
-      "lastModificationDate": 1622771705497,
-      "contentHash": "9da5f05ee2b09b2d2caffa6e5281b41e",
-      "sourceName": "contracts/LOGIKRocketBitch.sol",
+    "/Users/kamikaze/Desktop/localsrc/crypto/logik-blm-nifty-nft/contracts/FreeDOOMRocket.sol": {
+      "lastModificationDate": 1622945606859,
+      "contentHash": "7df8c2ee4b235537daa2336c7c0c4e4c",
+      "sourceName": "contracts/FreeDOOMRocket.sol",
       "solcConfig": {
         "version": "0.8.0",
         "settings": {
@@ -502,7 +502,7 @@
         "^0.8.0"
       ],
       "artifacts": [
-        "LOGIKRocketBitch"
+        "FreeDOOMRocket"
       ]
     }
   }
