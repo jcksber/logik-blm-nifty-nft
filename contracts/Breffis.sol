@@ -20,6 +20,7 @@ contract Breffis is ERC721, Ownable {
 
 	uint constant NUM_HOURS_IN_CYCLE = 6;
 	uint constant NUM_ASSETS = 4;
+	
 	uint private _creationTime;
 	uint private _lastHashIdx;
 	string[NUM_ASSETS] _assetHashes = ["QmWogPztGXiW6tbCcEfk2m819n1QPrQK7EVnxgZdPVRUPD", 
