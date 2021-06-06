@@ -14,7 +14,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(STAGING_ALCHEMY_API_URL);
 
 const breffisContract=require("../../artifacts/contracts/Breffis.sol/Breffis.json");
-const breffisAddress = "";//rinkeby
+const breffisAddress = "0x5C57842580069a204639f3D022351C9A5cB6EBF8";//rinkeby
 const breffisNFT = new web3.eth.Contract(breffisContract.abi, breffisAddress);
 
 async function mintBreffis() {

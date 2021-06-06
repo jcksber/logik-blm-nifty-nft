@@ -392,8 +392,8 @@
       ]
     },
     "/Users/kamikaze/Desktop/localsrc/crypto/logik-blm-nifty-nft/contracts/Breffis.sol": {
-      "lastModificationDate": 1622950821856,
-      "contentHash": "e4cb73219e96c04ca37251049fa17540",
+      "lastModificationDate": 1622956719865,
+      "contentHash": "f53fbd80b3deb6875f5428caaabf9d03",
       "sourceName": "contracts/Breffis.sol",
       "solcConfig": {
         "version": "0.8.0",
