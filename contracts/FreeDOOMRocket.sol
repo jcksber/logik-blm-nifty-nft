@@ -10,8 +10,6 @@
  * Rinkeby Address: 0xCf3d210B28521420712c00CCEF743bD69e3Ca530
  */
 
-// NOTE: 5 ASSETS, 10 DAY CYCLE
-
 pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
@@ -22,15 +20,11 @@ contract FreeDOOMRocket is ERC721, Ownable {
 	using Counters for Counters.Counter;
 	Counters.Counter private _tokenIds;
 
-	uint constant NUM_DAYS_IN_CYCLE = 10;
-	uint constant NUM_ASSETS = 5;
+	uint constant NUM_ASSETS = 3;
 	uint private _creationTime;
-	uint private _lastHashIdx;
 	string[NUM_ASSETS] _assetHashes = ["QmWogPztGXiW6tbCcEfk2m819n1QPrQK7EVnxgZdPVRUPD", 
 							  		   "QmNawKGNQxweTEzKADMoqXbAsyCDYR3KWbsCstrazKbwFC",
-							  		   "QmWogPztGXiW6tbCcEfk2m819n1QPrQK7EVnxgZdPVRUPD",
-							  		   "QmNawKGNQxweTEzKADMoqXbAsyCDYR3KWbsCstrazKbwFC",
-							  		   "QmNawKGNQxweTEzKADMoqXbAsyCDYR3KWbsCstrazKbwFC"];
+							  		   "QmWogPztGXiW6tbCcEfk2m819n1QPrQK7EVnxgZdPVRUPD"];
 	// 0: "Air this bitch out"
 	// 1: 
 	// ...
@@ -39,7 +33,6 @@ contract FreeDOOMRocket is ERC721, Ownable {
 	// (!) NOTE: we need to remove this and turn it into an initializer for upgrade-ability
 	constructor() ERC721("LOGIK: FreeDOOM Rocket", "") {
 		_creationTime = block.timestamp;
-		_lastHashIdx = _assetHashes.length - 1; //so we start with 0 in tokenURI
 	}
 
 
@@ -48,20 +41,14 @@ contract FreeDOOMRocket is ERC721, Ownable {
 	function tokenURI(uint256 tokenId) public view virtual override returns (string memory)
 	{
 		require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
-
-		string memory baseURI = _baseURI(); //we'll need this to complete the URL
+		string memory baseURI = _baseURI(); //we'll need this to complete the URI
 
 		// Get current time & determine how many days have gone by since creation
 		uint todayTime = block.timestamp;
 		uint256 daysPassed = uint256((todayTime - _creationTime) / 60 / 60 / 24);
-		uint idx = _lastHashIdx;
 
-		// If a multiple of 10 days have passed, rotate in the next URI
-		if (daysPassed % NUM_DAYS_IN_CYCLE == 0) { //day 0, 10, 20, 30,...
-			idx = _lastHashIdx < (_assetHashes.length - 1)
-				? _lastHashIdx + 1 
-				: 0;
-		} //else, continue using the current URI
+		// Every day, rotate in the next URI
+		uint idx = daysPassed % NUM_ASSETS;
 
 		assert(0 <= idx && idx < _assetHashes.length);//proof by inspection, but im alpha af
 

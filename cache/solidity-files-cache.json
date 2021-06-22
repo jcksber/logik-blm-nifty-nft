@@ -392,8 +392,8 @@
       ]
     },
     "/Users/kamikaze/Desktop/localsrc/crypto/logik-blm-nifty-nft/contracts/Breffis.sol": {
-      "lastModificationDate": 1622956719865,
-      "contentHash": "f53fbd80b3deb6875f5428caaabf9d03",
+      "lastModificationDate": 1623277574156,
+      "contentHash": "89bc8a43c1a4775492584935a688a380",
       "sourceName": "contracts/Breffis.sol",
       "solcConfig": {
         "version": "0.8.0",
@@ -430,8 +430,8 @@
       ]
     },
     "/Users/kamikaze/Desktop/localsrc/crypto/logik-blm-nifty-nft/contracts/LoveForTheLow.sol": {
-      "lastModificationDate": 1622947432342,
-      "contentHash": "31f33acec846b7dadcb44bd0bb19114c",
+      "lastModificationDate": 1623968404867,
+      "contentHash": "283298cf8d3de076f036ef1bf7e14a3d",
       "sourceName": "contracts/LoveForTheLow.sol",
       "solcConfig": {
         "version": "0.8.0",
@@ -468,8 +468,8 @@
       ]
     },
     "/Users/kamikaze/Desktop/localsrc/crypto/logik-blm-nifty-nft/contracts/FreeDOOMRocket.sol": {
-      "lastModificationDate": 1622950399825,
-      "contentHash": "3b66cc6e61af9bd045bb65b0af1fe772",
+      "lastModificationDate": 1623276861029,
+      "contentHash": "1d44fe8a744884e61ec58447caff9a1a",
       "sourceName": "contracts/FreeDOOMRocket.sol",
       "solcConfig": {
         "version": "0.8.0",

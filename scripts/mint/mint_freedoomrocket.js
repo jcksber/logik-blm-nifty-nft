@@ -13,8 +13,8 @@ const STAGING_PUBLIC_KEY = process.env.STAGING_PUBLIC_KEY;
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(STAGING_ALCHEMY_API_URL);
 
-const rbContract=require("../../artifacts/contracts/FreeDOOMRocket.sol/FreeDOOMRocket.json");
-const rbAddress = "0xCf3d210B28521420712c00CCEF743bD69e3Ca530";//rinkeby
+const rbContract=require("../../artifacts/contracts/LoveForTheLow.sol/LoveForTheLow.json");
+const rbAddress = "0xF59Df8206D1df71b1BE534f85BCBC2f5a3dA401A";//rinkeby
 const rbNFT = new web3.eth.Contract(rbContract.abi, rbAddress);
 
 async function mintFreeDOOMRocket() {
@@ -26,7 +26,7 @@ async function mintFreeDOOMRocket() {
 		'to': rbAddress,
 		'nonce': nonce,
 		'gas': 500000,
-		'data': rbNFT.methods.mintFreeDOOMRocket(STAGING_PUBLIC_KEY).encodeABI()
+		'data': rbNFT.methods.mintRoses(STAGING_PUBLIC_KEY).encodeABI()
 	};
 
 	const signPromise = web3.eth.accounts.signTransaction(tx, STAGING_PRIVATE_KEY);

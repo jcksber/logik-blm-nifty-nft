@@ -18,25 +18,19 @@ contract Breffis is ERC721, Ownable {
 	using Counters for Counters.Counter;
 	Counters.Counter private _tokenIds;
 
-	uint constant NUM_HOURS_IN_CYCLE = 6;
-	uint constant NUM_ASSETS = 4;
-	
-	uint private _creationTime;
-	uint private _lastHashIdx;
-	string[NUM_ASSETS] _assetHashes = ["QmSPLV7SsSuy3EUNtJzVtfJqB2TjyXFWg18kYzd7RWFDmX", 
-							  		   "QmWogPztGXiW6tbCcEfk2m819n1QPrQK7EVnxgZdPVRUPD",
-							  		   "QmSAF2zd13rnHiLmgeaVd2tUwUjr19Wdra7T6zWrtjJe48",
-							  		   "QmWogPztGXiW6tbCcEfk2m819n1QPrQK7EVnxgZdPVRUPD"];
-	// 0: Sunrise
-	// 1: Day
-	// 2: Sunset
-	// 3: Night
+	uint constant DAY_TIME = 6; //day asset @ 0600 UTC	
+	uint constant NIGHT_TIME = 18;//night asset @ 1800 UTC
+	uint constant NUM_ASSETS = 2;
 
+	uint private _creationTime;
+	string[NUM_ASSETS] _assetHashes = ["QmSPLV7SsSuy3EUNtJzVtfJqB2TjyXFWg18kYzd7RWFDmX", 
+							  		   "QmWogPztGXiW6tbCcEfk2m819n1QPrQK7EVnxgZdPVRUPD"];
+	// 0: Day
+	// 1: Night
 
 	// (!) NOTE: we need to remove this and turn it into an initializer for upgrade-ability
 	constructor() ERC721("LOGIK: Breffis", "") {
 		_creationTime = block.timestamp;
-		_lastHashIdx = _assetHashes.length - 1;//so we start with 0 in tokenURI
 	}
 
 
@@ -44,20 +38,18 @@ contract Breffis is ERC721, Ownable {
 	function tokenURI(uint256 tokenId) public view virtual override returns (string memory)
 	{
 		require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
-		
-		string memory baseURI = _baseURI(); //we'll need this to complete the URL
+		string memory baseURI = _baseURI(); //we'll need this to complete the URI
 
-		// Get current time & determine how many hours have gone by since creation
-		uint todayTime = block.timestamp;
-		uint256 hoursPassed = uint256((todayTime - _creationTime) / 60 / 60);
-		uint idx = _lastHashIdx;
+		// Get current hour of the day
+		uint8 hour = uint8((block.timestamp / 60 / 60) % 24);
 
-		// If a multiple of 6 hours have passed, rotate in the next URI
-		if (hoursPassed % NUM_HOURS_IN_CYCLE == 0) { //hour 6, 12, 18, 24
-			idx = _lastHashIdx < (_assetHashes.length - 1)
-				? _lastHashIdx + 1 
-				: 0;
-		} //else, continue using the current URI
+		uint idx = 0;
+		// If it's after 6am UTC and before 6pm UTC, it's daytime
+		if (DAY_TIME <= hour && hour < NIGHT_TIME) {
+			idx = 0; //Day time
+		} else {
+			idx = 1; //Night time
+		}
 
 		assert(0 <= idx && idx < _assetHashes.length);//we assert for the culture, not the proof
 

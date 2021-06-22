@@ -28,7 +28,7 @@ contract LoveForTheLow is ERC721, Ownable {
 		require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
 		
 		string memory baseURI = _baseURI();
-		string memory assetHash = ""; // (!) UPDATE ONCE READY
+		string memory assetHash = "QmVdE84ZJxT66j8nEEVFKvwBKXsyYYihHawHmCqsLF9qMv"; // (!) UPDATE ONCE READY
 
 		return string(abi.encodePacked(baseURI, assetHash));
 	}
