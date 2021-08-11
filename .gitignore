@@ -3,3 +3,7 @@ node_modules
 
 # Sensitive environment variables
 .env
+
+archive
+artifacts
+cache
